@@ -26,7 +26,7 @@ for (const name of PAGES) {
   bodyTag.replace(/(data-[\w-]+)="([^"]*)"/g, (_, k, v) => { attrs[k] = v; return ''; });
 
   const main = src.match(/<main>([\s\S]*?)<\/main>/i);
-  const title = (src.match(/<title>([^<]*)<\/title>/i) || [, 'NexasSix'])[1];
+  const title = (src.match(/<title>([^<]*)<\/title>/i) || [, 'ZaviBinary'])[1];
 
   // inline page-specific scripts (those without a src)
   const inline = [...src.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]).join('\n');
@@ -44,7 +44,7 @@ for (const name of PAGES) {
    not be there. */
 const favicon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABOUlEQVR4nOxVTWrCQBj9Yl3UTaj7XKBeoCkt9BBtMTTrlq5EMHgHdcDoFUSJxJ8bCIJidKmgayEbr+DKDweGSOJk0GQh5i3CS2by3sz7PmbS2ewTxIkUxIzE4A4M0nA1WvqO8cGyNlwR72gSkaq+QHwGiqJ0rc52tEdu233Xdf1zpIvPIlSfTsaUm2azbjYCp12+A0IqlNi9/jl1ECmyZbXZSr0fX1UVycxxDKPM+T0Vqo5CNA18+tU1Tecr8GrAhCiwhnlN//76LBYL9PXt/QPCcNbAu8y5s2CidB9ISkYZRyAMD5nMI18dQ0AhCSRseVmW6YTfv38R9WCDwIiZB/K89iOoDv6I+AXEAsCxL0EYJwaEVKmESHsI4iSi9XqTyz1jAaNSB39E2CSBR0pkBpEjufQTgxswOAAAAP//iGVDEgAAAAZJREFUAwAw1YOpcq+00AAAAABJRU5ErkJggg==';
 
-const out = `<title>NexasSix Terminal</title>
+const out = `<title>ZaviBinary Terminal</title>
 <link rel="icon" type="image/png" href="${favicon}">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">

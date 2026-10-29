@@ -1,6 +1,6 @@
 {
-  "name": "NexasSix Terminal",
-  "short_name": "NexasSix",
+  "name": "ZaviBinary Terminal",
+  "short_name": "ZaviBinary",
   "description": "Trade synthetic indices from your phone.",
   "start_url": "index.html",
   "scope": ".",

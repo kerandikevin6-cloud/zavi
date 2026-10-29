@@ -1,5 +1,5 @@
 /* ============================================================
-   NexasSix, shell
+   ZaviBinary, shell
    Injects the chrome (top bar, drawer, tab bar), owns the modal
    engine, theme, session guard, connection banner and consent
    surfaces. Page-specific logic lives in trade.js / positions.js.
@@ -595,15 +595,15 @@
   /* The name, in two lines, with a monogram beside it. One place, so
      the bar and the sign-in pages cannot drift apart.
 
-     aria-label carries the whole name: a screen reader reading "NEXAS
-     SIX" off three separate elements is not the name of anything. */
+     aria-label carries the whole name: a screen reader reading "ZAVI
+     BINARY" off three separate elements is not the name of anything. */
   function wordmark(to) {
-    return '<a class="wordmark" href="' + to + '" aria-label="NexasSix">' +
+    return '<a class="wordmark" href="' + to + '" aria-label="ZaviBinary">' +
       '<svg class="wm-mark" viewBox="0 0 64 64" aria-hidden="true">' +
         '<path d="M12 43L24 31L32 38L47 21" fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="square"/>' +
         '<rect x="44" y="14" width="9" height="9" fill="var(--accent-fill)"/>' +
       '</svg>' +
-      '<span class="wm-name" aria-hidden="true"><b>Nexas</b><i>Six</i></span>' +
+      '<span class="wm-name" aria-hidden="true"><b>Zavi</b><i>Binary</i></span>' +
     '</a>';
   }
   window.NexWordmark = wordmark;
@@ -971,8 +971,8 @@
   function shareLink(url) {
     if (navigator.share) {
       navigator.share({
-        title: 'NexasSix',
-        text: 'I trade synthetic indices on NexasSix. Join with my link.',
+        title: 'ZaviBinary',
+        text: 'I trade synthetic indices on ZaviBinary. Join with my link.',
         url: url
       }).catch(function () {});
       return;
@@ -1157,7 +1157,7 @@
     var v = document.createElement('div');
     v.className = 'boot';
     v.id = 'bootVeil';
-    v.innerHTML = '<div class="boot-word">NexasSix</div>' + loader() +
+    v.innerHTML = '<div class="boot-word">ZaviBinary</div>' + loader() +
       '<span>Connecting to the feed</span>';
     document.body.appendChild(v);
   }
@@ -1319,7 +1319,7 @@
     el.className = 'splash';
     el.innerHTML = '<div class="splash-inner">' +
       '<div class="pulse"><i></i><i></i><i></i></div>' +
-      '<div class="splash-word">NexasSix</div>' +
+      '<div class="splash-word">ZaviBinary</div>' +
       '<div class="splash-msg" role="status">' + message + '</div></div>';
     document.body.appendChild(el);
     requestAnimationFrame(function () { el.classList.add('open'); });
@@ -2772,7 +2772,7 @@
         '</div>' +
         '<p class="ticket-said">' + escapeHtml(t.body) + '</p>' +
         (t.reply
-          ? '<div class="ticket-reply"><b>NexasSix support</b><p>' + escapeHtml(t.reply) + '</p></div>'
+          ? '<div class="ticket-reply"><b>ZaviBinary support</b><p>' + escapeHtml(t.reply) + '</p></div>'
           : '<div class="ticket-wait">We usually come back within 30 minutes.</div>') +
         '<div class="ticket-when">' + when + '</div>' +
       '</div>';
